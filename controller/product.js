@@ -3,12 +3,12 @@ import fs from "fs";
 
 class productController extends crudMethods {
   _manipulateData = JSON.parse(
-    fs.readFileSync("F:/coding/Back-End development/express-js/data.json", {
+    fs.readFileSync(path.join(__dirname, "data.json"), {
       encoding: "utf-8",
     })
   ).products;
 
-  _logFilePath = "F:/coding/Back-End development/express-js/productslogFile.txt";
+  _logFilePath = path.join(__dirname, "productslogFile.txt");
 }
 
 export default new productController();
