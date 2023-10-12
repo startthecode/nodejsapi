@@ -21,8 +21,8 @@ server.use(Express.static(path.join(__dirname, "public")));
 server.use(Express.urlencoded({ extended: true }));
 server.set("view engine", "ejs");
 
-server.use("/api/product", product._updateLogFIle);
-server.use("/api/user", user._updateLogFIle);
+// server.use("/api/product", product._updateLogFIle);
+// server.use("/api/user", user._updateLogFIle);
 server.use("/api/", productRoutes);
 server.use("/api/", userRoutes);
 server.use("/api/testing/", tesingRoute);

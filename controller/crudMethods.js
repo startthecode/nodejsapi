@@ -1,7 +1,7 @@
 import fs from "fs";
 class crudMethods {
   _manipulateData;
-  _logFilePath;
+  // _logFilePath;
 
   postMethod = (req, res) => {
     let newProduct = req.body;
@@ -43,17 +43,17 @@ class crudMethods {
     res.json(this._manipulateData);
   };
 
-  _updateLogFIle = (req, res, next) => {
-    fs.appendFile(
-      this._logFilePath,
-      `\n \n ${req.get("Sec-Ch-Ua")} ${new Date()} `,
-      "utf-8",
-      (err) => {
-        if (err) console.log("err");
-        next();
-      }
-    );
-  };
+  // _updateLogFIle = (req, res, next) => {
+  //   fs.appendFile(
+  //     this._logFilePath,
+  //     `\n \n ${req.get("Sec-Ch-Ua")} ${new Date()} `,
+  //     "utf-8",
+  //     (err) => {
+  //       if (err) console.log("err");
+  //       next();
+  //     }
+  //   );
+  // };
 }
 
 export default crudMethods;
